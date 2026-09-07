@@ -1,5 +1,4 @@
 package com.example.backend.dtos.RequestDTOs;
-import java.time.LocalTime;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -16,5 +15,5 @@ public class RouteRequestDTO {
     @NotNull  (message = "Destance Km is required!")
     private double destanceKm;
     @NotNull  (message = "Duration Minutes is required!")
-    private LocalTime durationMinutes;
+    private Integer durationMinutes;
 }

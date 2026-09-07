@@ -1,5 +1,4 @@
 package com.example.backend.entities;
-import java.time.LocalTime;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,5 +38,5 @@ public class Route {
     private double distanceKm;
 
     @Column (name = "duration_minutes", nullable = false)
-    private LocalTime durationMinutes;
+    private Integer durationMinutes;
 }

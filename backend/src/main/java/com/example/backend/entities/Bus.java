@@ -29,9 +29,9 @@ public class Bus {
     private String plateNumber;
 
     @Enumerated (EnumType.STRING)
-    @Column (name = "bus_type", nullable = false)
+    @Column (name = "bus_type", nullable = false)   
     private BusType busType;
    
     @Column (name = "total_seat", nullable = false)
-    private int totalSeats;
-}
+    private Integer totalSeats;
+}   

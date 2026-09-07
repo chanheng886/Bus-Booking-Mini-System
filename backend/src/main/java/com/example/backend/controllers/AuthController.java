@@ -9,12 +9,15 @@ import com.example.backend.dtos.RequestDTOs.AuthRequestDTO;
 import com.example.backend.dtos.RequestDTOs.RegisterRequestDTO;
 import com.example.backend.dtos.ResponseDTOs.AuthResponse;
 import com.example.backend.services.AuthService;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/auth")
+@Tag (name = "Auth")
 public class AuthController {
     private final AuthService authService;
     @PutMapping("/register")

@@ -12,11 +12,13 @@ import com.example.backend.dtos.RequestDTOs.BusRequestDTO;
 import com.example.backend.dtos.ResponseDTOs.BusResponseDTO;
 import com.example.backend.services.BusService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
 @RestController 
 @RequestMapping ("/api/v1/bus")
 @RequiredArgsConstructor 
+@Tag (name = "Bus")
 public class BusController {
     private final BusService busService;
 

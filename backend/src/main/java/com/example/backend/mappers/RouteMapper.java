@@ -14,6 +14,7 @@ public class RouteMapper {
         route.setOriginCity(dto.getOriginCity());
         route.setDestinationCity(dto.getDestinationCity());
         route.setDistanceKm(dto.getDestanceKm());
+        route.setDurationMinutes(dto.getDurationMinutes());
         return route;
     }
     public RouteResponseDTO toResponse(Route route){
@@ -24,6 +25,7 @@ public class RouteMapper {
         dto.setId(route.getId());
         dto.setOriginCity(route.getOriginCity());
         dto.setDestinationCity(route.getDestinationCity());
+        dto.setDestanceKm(route.getDistanceKm());
         dto.setDurationMinutes(route.getDurationMinutes());
         return dto;
     }
@@ -33,6 +35,7 @@ public class RouteMapper {
         }
         route.setOriginCity(dto.getOriginCity());
         route.setDestinationCity(dto.getDestinationCity());
+        route.setDistanceKm(dto.getDestanceKm());
         route.setDurationMinutes(dto.getDurationMinutes());
         return  route;
     }
