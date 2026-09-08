@@ -1,16 +1,13 @@
 package com.example.backend.services;
+import java.util.List;
 
-import org.springframework.stereotype.Service;
-
-import com.example.backend.mappers.TripScheduleMapper;
-import com.example.backend.repositories.TripScheduleRepository;
-
-import lombok.RequiredArgsConstructor;
-
-@Service 
-@RequiredArgsConstructor 
-public class TripScheduleService {
-    private final TripScheduleMapper mapper;
-    private final TripScheduleRepository repository;
-    
+import com.example.backend.dtos.RequestDTOs.TripScheduleRequestDTO;
+import com.example.backend.dtos.ResponseDTOs.TripScheduleResponseDTO;
+ 
+public interface TripScheduleService {
+    List<TripScheduleResponseDTO> getAllTripSchedule();
+    List<TripScheduleResponseDTO> getScheduleByOriginCityAndDestinationCity(String originCity, String destinationCity);
+    TripScheduleResponseDTO getTripScheduleByid(Long id);
+    TripScheduleResponseDTO createTripSchedule(TripScheduleRequestDTO dto);
+    void cancelTripSchedule(Long id);
 }

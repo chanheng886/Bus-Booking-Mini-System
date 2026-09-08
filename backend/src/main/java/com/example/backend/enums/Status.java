@@ -1,7 +1,7 @@
-package com.example.backend.enums;
+// package com.example.backend.enums;
 
-public enum Status {
-    PENDING,
-    CONFIRM,
-    CANCELLED
-}
+// public enum Status {
+//     PENDING,
+//     CONFIRM,
+//     CANCELLED
+// }

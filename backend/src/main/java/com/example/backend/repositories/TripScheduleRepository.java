@@ -9,7 +9,7 @@ import com.example.backend.entities.TripSchedule;
 public interface TripScheduleRepository extends JpaRepository<TripSchedule, Long> {
     List<TripSchedule> findByRoute_OriginCityIgnoreCaseAndRoute_DestinationCityIgnoreCase(String originCity, String destinationCity);
 
-    @Query ("""
+    @Query (""" 
         SELECT COUNT(ts) > 0 FROM TripSchedule ts
         WHERE ts.bus.id = :busId
         AND ts.status != 'CANCELLED'

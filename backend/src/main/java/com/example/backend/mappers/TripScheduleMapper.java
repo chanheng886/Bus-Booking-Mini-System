@@ -15,7 +15,6 @@ public class TripScheduleMapper {
         TripSchedule schedule = new TripSchedule();
         schedule.setDepartureTime(dto.getDepartureTime());
         schedule.setBasePrice(dto.getBasePrice());
-        schedule.setStatus(dto.getStatus());
         return schedule;
     }
 

@@ -1,7 +1,6 @@
 package com.example.backend.dtos.ResponseDTOs;
 import java.time.LocalDateTime;
 import com.example.backend.enums.BusType;
-import com.example.backend.enums.Status;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,5 +20,5 @@ public class TripScheduleResponseDTO {
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
     private double basePrice;
-    private Status status;
+    private String status;
 }

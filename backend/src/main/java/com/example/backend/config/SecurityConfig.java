@@ -41,8 +41,10 @@ public class SecurityConfig {
                  .requestMatchers(HttpMethod.POST, "/api/v1/route/**").hasRole("ADMIN")
                  .requestMatchers(HttpMethod.PUT, "/api/v1/route/**").hasRole("ADMIN")
                  .requestMatchers(HttpMethod.DELETE, "/api/v1/route/**").hasRole("ADMIN")
+                 .requestMatchers(HttpMethod.POST, "/api/v1/trip-schedule/**").hasRole("ADMIN")
                  .requestMatchers(HttpMethod.GET, "/api/v1/bus/**").authenticated()
                  .requestMatchers(HttpMethod.GET, "/api/v1/route/**").authenticated()
+                 .requestMatchers(HttpMethod.GET, "/api/v1/trip-schedule/**").authenticated()
                  .anyRequest().authenticated()
             )
             .authenticationProvider(authenticationProvider) // uses the injected field

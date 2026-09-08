@@ -1,6 +1,5 @@
 package com.example.backend.entities;
 import java.time.LocalDateTime;
-import com.example.backend.enums.Status;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -49,7 +48,5 @@ public class TripSchedule {
     @Column (name = "base_price", nullable = false)
     private double basePrice;
 
-    @Column (name = "status", nullable = false)
-    @Enumerated (EnumType.STRING)
-    private Status status = Status.PENDING;
+    private String status;
 }

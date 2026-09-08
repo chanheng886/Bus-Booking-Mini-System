@@ -1,6 +1,5 @@
 package com.example.backend.dtos.RequestDTOs;
 import java.time.LocalDateTime;
-import com.example.backend.enums.Status;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -13,6 +12,8 @@ import lombok.NoArgsConstructor;
 public class TripScheduleRequestDTO {
     @NotNull (message = "Bus Id is required!!")
     private Long busId;
+    @NotBlank (message = "Route id is required!")
+    private Long routeId;
     @NotBlank (message = "Origin city is required!!")
     private String originCity;
     @NotBlank (message = "Destination city is requried!!")
@@ -23,6 +24,5 @@ public class TripScheduleRequestDTO {
     private LocalDateTime arrivalTime;
     @NotNull (message = "Base price is required!!")
     private double basePrice;
-    @NotBlank (message = "Status is requried!!")
-    private Status status;
+    private String status = "SCHEDULED";
 }
